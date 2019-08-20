@@ -1,5 +1,6 @@
 # configSite
-When clone this directory from this site, Run "python3 configSite/installLAMP.py" 
+When clone this directory from this site, Run "python3 configSite/installLAMP.py" （Generally, the whole process will be finished within 3 min.）
+
 The 4 script files are automatic calling each other once users call the first script - installLAMP.py
 
 1. installLAMP.py will install all software the moodle site needs. And it will call installMysql.sh, which could install mysql in silence.

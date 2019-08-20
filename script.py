@@ -69,6 +69,47 @@ cur.execute("GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DR
 
 cur.close()
 con.close()
+#create the config.php in moodle
+os.chdir("/var/www/html/moodle")
+os.system("sudo touch config.php")
+
+#setup the config.php
+import socket,struct,fcntl
+p = os.popen("curl ifconfig.me")
+publicIP = p.read()
+f = open('/var/www/html/moodle/config.php','w')
+f.write("<?php // Moodle configuration file \n"
+"\n"
+"unset($CFG);\n"
+"global $CFG;\n"
+"$CFG = new stdClass();\n"
+"\n"
+"$CFG->dbtype = 'mysqli';\n"
+"$CFG->dblibrary = 'native';\n"
+"$CFG->dbhost = 'localhost';\n"
+"$CFG->dbname = 'mysql';\n"
+"$CFG->dbuser = 'root';\n"
+"$CFG->dbpass = '1stgroup';\n"
+"$CFG->prefix = 'mdl_';\n"
+"$CFG->dboptions = array (\n"
+" 'dbpersist' => 0,\n"
+" 'dbport' => '',\n"
+" 'dbsocket' => ''\n,"
+" 'dbcollation' => 'utf8mb4_unicode_ci',\n"
+" );\n"
+" \n"
+"$CFG->wwwroot = 'http://%s/moodle';\n"
+"$CFG->dataroot = '/var/moodledata';\n"
+"$CFG->admin = 'admin';\n"
+"\n"
+"$CFG->directorypermissions = 0777;\n"
+"\n"
+"require_once(__DIR__ . '/lib/setup.php');\n"
+"\n"
+"// There is no php closing tag in this file,\n"
+"// it is intentional because it prevents trailing whitespace problems!\n"%(publicIP))
+f.close()
+os.system("sudo php /var/www/html/moodle/install.php")
 os.system("sudo sh /home/ubuntu/configSite/phpmyadmin.sh")
 #os.system("sudo chmod -R 777 /var/www/html/moodle")
 #os.system("sudo chmod -R 0755 /var/www/html/moodle")

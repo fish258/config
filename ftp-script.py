@@ -9,7 +9,7 @@ os.system("sudo chmod o+r vsftpd.txt")
 os.system("sudo chmod o+w vsftpd.txt")
 newline=""
 #/home/ubuntu/configSite/vsftpd.txt
-with open("vsftpd.txt","r+") as f:
+with open("/home/ubuntu/configSite/vsftpd.txt","r+") as f:
     for line in f.readlines():
         newline=newline+line
 f.close()

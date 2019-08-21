@@ -5,11 +5,11 @@ os.system("sudo apt-get install vsftpd")
 # os.system("sudo ")
 os.system("sudo chmod o+r /etc/vsftpd.conf")
 os.system("sudo chmod o+w /etc/vsftpd.conf")
-os.system("sudo chmod o+r vsftpd.txt")
-os.system("sudo chmod o+w vsftpd.txt")
+os.system("sudo chmod o+r configSite/vsftpd.txt")
+os.system("sudo chmod o+w configSite/vsftpd.txt")
 newline=""
 #/home/ubuntu/configSite/vsftpd.txt
-with open("/home/ubuntu/configSite/vsftpd.txt","r+") as f:
+with open("configSite/vsftpd.txt","r+") as f:
     for line in f.readlines():
         newline=newline+line
 f.close()

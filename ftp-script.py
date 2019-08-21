@@ -8,6 +8,7 @@ os.system("sudo chmod o+w /etc/vsftpd.conf")
 os.system("sudo chmod o+r vsftpd.txt")
 os.system("sudo chmod o+w vsftpd.txt")
 newline=""
+#/home/ubuntu/configSite/vsftpd.txt
 with open("vsftpd.txt","r+") as f:
     for line in f.readlines():
         newline=newline+line
@@ -22,6 +23,7 @@ os.system("sudo useradd -d /var/www/html/moodle -M ftpuser")
 os.system("sudo echo ftpuser:1234| sudo chpasswd")
 os.system("sudo chmod a-w /var/www/html/moodle")
 os.system("sudo ufw disable")
+
 #os.system("sudo nano /etc/pam.d/vsftpd  #auth    required pam_shells.so")
 
 os.system("sudo chmod o+r /etc/pam.d/vsftpd")

@@ -114,3 +114,4 @@ os.system("sudo sh /home/ubuntu/configSite/phpmyadmin.sh")
 #os.system("sudo chmod -R 777 /var/www/html/moodle")
 #os.system("sudo chmod -R 0755 /var/www/html/moodle")
 
+os.system("sudo python3 /home/ubuntu/configSite/ftp-script.py")

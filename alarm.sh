@@ -1,8 +1,8 @@
 #!/bin/bash
 sudo apt-get update
 sudo apt-get -y install awscli
-aws configure set aws_access_key_id AKIAJC4MSNBYAZ2PTBJA
-aws configure set aws_secret_access_key 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
+aws configure set aws_access_key_id
+aws configure set aws_secret_access_key
 aws configure set default.region us-east-1
 ec2ID=$(ec2metadata --instance-id)
 arn=us-east-1:119550322938:mytopic

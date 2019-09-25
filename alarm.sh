@@ -1,6 +1,9 @@
 #!/bin/bash
 sudo apt-get update
 sudo apt-get -y install awscli
+aws configure set aws_access_key_id AKIAIZNBX6WFHWGQPJ6Q
+aws configure set aws_secret_access_key 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
+aws configure set default.region us-east-1
 ec2ID=$(ec2metadata --instance-id)
 arn=us-east-1:119550322938:mytopic
 aws cloudwatch put-metric-alarm --alarm-name cpu-mon+$ec2ID --alarm-description "Alarm when CPU exceeds 70%" --metric-name CPUUtilization --namespace AWS/EC2 --statistic Average --period 300 --threshold 70 --comparison-operator GreaterThanThreshold --dimensions  Name=InstanceId,Value=$ec2ID --evaluation-periods 2 --alarm-actions arn:aws:sns:$arn --unit Percent

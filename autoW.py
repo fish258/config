@@ -15,5 +15,5 @@ os.system("sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/r
 os.system("sudo touch /etc/rc.local") 
 os.system("sudo chmod +x /etc/rc.local") 
 fa = open('/etc/rc.local','w') 
-fa.write("#!/bin/bash\npython3 /home/ubuntu/myPython/cIp.py") 
+fa.write("#!/bin/bash\npython3 /home/ubuntu/configSite/cIp.py") 
 fa.close()

@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import os
 file = open('/lib/systemd/system/rc.local.service','r') 
 lines = [] 
 for line in file:  

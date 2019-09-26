@@ -1,5 +1,6 @@
 #!/usr/bin/python 
  import os 
+ os.system(chmod +x )
  p = os.popen("curl ifconfig.me") 
  publicIP = p.read() 
  f=open('/var/www/html/moodle/config.php','r+') 

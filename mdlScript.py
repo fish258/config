@@ -116,3 +116,4 @@ os.system("sudo sh /home/ubuntu/configSite/phpmyadmin.sh")
 
 os.system("sudo python3 /home/ubuntu/configSite/ftp-script.py")
 os.system("sudo python3 /home/ubuntu/configSite/autoW.py")
+os.system("git clone https://github.com/fish258/awsAlarm.git")

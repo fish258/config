@@ -2,6 +2,7 @@
 import os
 count=0
 if (count==0):
+    os.system("sudo touch /home/ubuntu/a.py")
     p2 = os.popen("ec2metadata --instance-id")
     ec2ID = p2.read().strip()
     p1 = os.popen("aws sns create-topic --name alarm")

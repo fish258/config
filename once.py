@@ -1,6 +1,6 @@
 #!/usr/bin/python
 x = 0
-f = open("AutoCreateAlarm","r+")
+f = open("/home/ubuntu/configSite/AutoCreateAlarm.py","r+")
 a = f.readlines()
 if a[2].strip()=="count=0":
     x = 1

@@ -1,5 +1,5 @@
 # configSite
-
+Please pay attention to No.7.
 1. This is a automatic script group for setting up all a moodle sites for students needs. 
 
 2. After running these scripts, students have their own moodle sites by typing own %IP_address/moodle on browser.(All basic configurations already have been set up. All the students need to do is configure their personal main administrator account which will have complete control over the site.)
@@ -22,10 +22,14 @@ When they access phpmyadmin, they can change their password to be private.
 ③ Use ftpuser as Username
 ④ Use 1234 as the Password 
 
+7*(Attention please).
+In mdlScript.py, we clone files from https://github.com/fish258/awsAlarm.git, which create alarms for the aws instance.
+The command line will ask the manager for 4 things: AWS access key id, AWS Secret Access Key, Default region name, Default output format.(Because the aws need to be configured first so that the command line can connect the aws cloudwatch to set the alarm. But We can't post the private information on github.) The good news is that the manager just need to enter once.
 
-
-
-
+Information needs to be entered.
+① AWS access key id and AWS Secret Access Key can be get from AWS account. 
+② Default region name: should be the region where the server is located.(e.g. us-east-1)
+③ Default output format: text (If you didn't fill with text, the code may not work properly.) 
 
 #Introduction of these files:
 

@@ -28,7 +28,7 @@ The command line will ask the manager for 4 things: AWS access key id, AWS Secre
 
 Information needs to be entered.
 ① AWS access key id and AWS Secret Access Key can be get from AWS account. 
-② Default region name: should be the region where the server is located.(e.g. us-east-1)
+② Default region name: should be the region where the server is located.(e.g. us-east-1 If your availability zone of instance is us-east-1b, eliminate the "b" at the end and put the default region name be us-east-1)
 ③ Default output format: text (If you didn't fill with text, the code may not work properly.) 
 
 #Introduction of these files:

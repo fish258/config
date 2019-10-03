@@ -4,7 +4,7 @@ import os
 os.system("sudo mkdir /var/www/html/cgi-bin")
 os.system("sudo mv /home/ubuntu/configSite/PWD.html /var/www/html")
 os.system("sudo mv /home/ubuntu/configSite/Forget_PWD.py /var/www/html/cgi-bin/Forget_PWD.py")
-os.system("sudo mv /home/ubuntu/configSite/Change.py /var/www/html/cgi-bin/change.py")
+os.system("sudo mv /home/ubuntu/configSite/change.py /var/www/html/cgi-bin/change.py")
 
 os.system("sudo apt-get -y install python3-psycopg2")
 

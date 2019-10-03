@@ -24,7 +24,7 @@ When they access phpmyadmin, they can change their password to be private.
 
 7*(Attention please).
 In mdlScript.py, we clone files from https://github.com/fish258/awsAlarm.git, which create alarms for the aws instance.
-The command line will ask the manager for 4 things: AWS access key id, AWS Secret Access Key, Default region name, Default output format.(Because the aws need to be configured first so that the command line can connect the aws cloudwatch to set the alarm. But We can't post the private information on github.) The good news is that the manager just need to enter once.
+The command line will ask the manager for 4 things: AWS access key id, AWS Secret Access Key, Default region name, Default output format.(Because the aws need to be configured first so that the command line can connect the aws cloudwatch to set the alarm. But We can't post the private information on github.) The good news is that the manager just need to enter once. This is a one-time setup if your preferences don't change because the AWS CLI remembers your settings between sessions.
 
 Information needs to be entered.
 ① AWS access key id and AWS Secret Access Key can be get from AWS account. 

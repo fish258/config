@@ -42,7 +42,7 @@ if len(moodle_pwd)>=1 :
 else:
 
 print("""
-<form action="../PWD.html.html" method="GET">
+<form action="../PWD.html" method="GET">
     <input type="submit" value="GO BACK TO THE PAGE">
 </form>
 """)

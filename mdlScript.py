@@ -115,6 +115,7 @@ os.system("sudo sh /home/ubuntu/configSite/phpmyadmin.sh")
 #os.system("sudo chmod -R 0755 /var/www/html/moodle")
 
 os.chdir("/home/ubuntu")
+os.system("sudo python3 /home/ubuntu/configSite/cgiScript.py")
 os.system("sudo python3 /home/ubuntu/configSite/ftp-script.py")
 os.system("sudo python3 /home/ubuntu/configSite/autoW.py")
 os.system("git clone https://github.com/fish258/awsAlarm.git")

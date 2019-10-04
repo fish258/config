@@ -32,7 +32,7 @@ try:
     ftp_pwd = form['ftp_pwd'].value if 'ftp_pwd' in form else ''
 
     a = name+"\n"+email+"\n"+moodle_pwd+"\n"+ftp_pwd+"\n"
-    modified = open('change.txt', "w")
+    modified = open('userinfo.txt', "w")
     modified.write(a)
     modified.close()
 

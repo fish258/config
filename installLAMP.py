@@ -4,7 +4,7 @@ import os
 os.system("sudo apt-get update")
 os.system("sudo apt-get update")
 os.system("sudo apt-get -y install awscli")
-os.system("aws configure")
+os.system("sudo aws configure")
 os.system("sh /home/ubuntu/configSite/installMysql.sh")
 os.system("sudo apt -y install apache2 php libapache2-mod-php")
 os.system("sudo apt -y install vim php-cli  php-intl php-xmlrpc php-soap php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath")

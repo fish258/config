@@ -16,7 +16,7 @@ os.system("sudo chmod o+w userinfo.txt")
 l=[]
 conf = open('userinfo.txt',"r")
 for i in conf:
-    print(i)
+#     print(i)
     test = i.split('\n')  # 这里变成了 list ['I','love','python']
     test = ''.join(test)
 #     print(len(test))
@@ -56,14 +56,16 @@ if len(moodle_pwd)>=1 :
         cur.execute("flush privileges;")
         cur.close()
         con.close()
+        print("Changed moodle password successful, log in to try")
         # create the config.php in moodle
     except  psycopg2.Error as e:
         print("Database Error: {}".format(e))
 
 if len(ftp_pwd)>=1:
     os.system("sudo echo ftpuser:%s| sudo chpasswd"%(ftp_pwd))
+    print("Changed ftp password successful, log in to try")
 if len(moodle_pwd)<1 and len(ftp_pwd)<1:
-    print("something wrong!")
+    print("something wrong !")
 
 print("""
 <form action="../PWD.html" method="GET">

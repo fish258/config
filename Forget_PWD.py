@@ -59,14 +59,10 @@ try:
         try:
             with smtplib.SMTP("smtp.gmail.com", 587) as server:
                 server.ehlo()
-                # print("a")
                 server.starttls(context=context)
                 server.ehlo()
-                # print("b")
                 server.login(mail_user, mail_pass)
-                # print("c")
                 server.sendmail(mail_user, receivers, message.as_string())
-                # print("d")
             print("send succssful")
         except smtplib.SMTPException as e:
             print(e)

@@ -41,4 +41,4 @@ Information needs to be entered.
 
 #4. At the end of mdlScript.py(After running phpmyadmin.sh),it called configSite.py to create cgi connection ,and create cgi-bin folder ,to make Web access possible.
 
-#5.wdpwd.sh make the user "www-data" using coommand lines without password.
+#5.Wdpwd.sh make the user "www-data" using coommand lines without password.

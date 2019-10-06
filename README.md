@@ -38,4 +38,7 @@ Information needs to be entered.
 #2. In addition, at the end of installLAMP.py, it calls mdlScript.py, which downloads moodle from github and set up some configuration.
 
 #3. At the end of mdlScript.py(After creating mysql user of moodle), it calls phpmyadmin.sh to install phpmyadmin in silence. And at the same time, it uses moodle mysql user's name as username and pwd as pwd. 
- 
+
+#4. At the end of mdlScript.py(After running phpmyadmin.sh),it called configSite.py to create cgi connection ,and create cgi-bin folder ,to make Web access possible.
+
+#5.wdpwd.sh make the user "www-data" using coommand lines without password.
